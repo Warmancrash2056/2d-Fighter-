@@ -1,15 +1,29 @@
 extends KinematicBody2D
 
-onready var Animate = $AnimatedSprite;
+class_name Player
 
-export (int) var speed;
+export (float) var gravity;
 
-export (int) var accel;
+var velocity = Vector2.ZERO;
+
+var velocity_up = Vector2.UP;
+
+onready var animations = $AnimatedSprite;
+
+onready var states = $"State Manager"
 
 func _ready() -> void:
-	print("Player 1 Ready")
+	states.init(self)
 	
-func _physics_process(delta):
-	var input_vector = Vector2.ZERO
+func _unhandled_input(event : InputEvent) -> void:
+	states.input(event)
 	
-	input_vector = Input.get_axis()
+func _physics_process(delta : float) -> void:
+	states.physics_process(delta)
+	
+func _process(delta : float) -> void:
+	states.process(delta)
+	
+	
+
+

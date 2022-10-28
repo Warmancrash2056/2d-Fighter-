@@ -1,12 +1,163 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=67 format=2]
 
-[ext_resource path="res://Player 1.gd" type="Script" id=1]
+[ext_resource path="res://Player/Player 1.gd" type="Script" id=1]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/idle/idle_1.png" type="Texture" id=2]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/idle/idle_2.png" type="Texture" id=3]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/idle/idle_3.png" type="Texture" id=4]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/idle/idle_4.png" type="Texture" id=5]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/idle/idle_5.png" type="Texture" id=6]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/idle/idle_6.png" type="Texture" id=7]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_5.png" type="Texture" id=8]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_3.png" type="Texture" id=9]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/1_atk/1_atk_1.png" type="Texture" id=10]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/1_atk/1_atk_2.png" type="Texture" id=11]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/1_atk/1_atk_3.png" type="Texture" id=12]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/1_atk/1_atk_4.png" type="Texture" id=13]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_4.png" type="Texture" id=14]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_6.png" type="Texture" id=15]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_8.png" type="Texture" id=16]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_7.png" type="Texture" id=17]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/1_atk/1_atk_6.png" type="Texture" id=18]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/1_atk/1_atk_5.png" type="Texture" id=19]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_1.png" type="Texture" id=20]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/run/run_2.png" type="Texture" id=21]
+[ext_resource path="res://Player/Nuetral.gd" type="Script" id=22]
+[ext_resource path="res://Player/Idle.gd" type="Script" id=23]
+[ext_resource path="res://Player/Move.gd" type="Script" id=24]
+[ext_resource path="res://Player/State Manager.gd" type="Script" id=25]
+[ext_resource path="res://Player/Side Light.gd" type="Script" id=26]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_10.png" type="Texture" id=27]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_11.png" type="Texture" id=28]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_5.png" type="Texture" id=29]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_9.png" type="Texture" id=30]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_8.png" type="Texture" id=31]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_12.png" type="Texture" id=32]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_7.png" type="Texture" id=33]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/2_atk/2_atk_6.png" type="Texture" id=34]
+[ext_resource path="res://Player/Down Light.gd" type="Script" id=35]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_19.png" type="Texture" id=36]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_13.png" type="Texture" id=37]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_16.png" type="Texture" id=38]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_12.png" type="Texture" id=39]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_14.png" type="Texture" id=40]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_15.png" type="Texture" id=41]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_17.png" type="Texture" id=42]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_18.png" type="Texture" id=43]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_11.png" type="Texture" id=44]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_23.png" type="Texture" id=45]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_21.png" type="Texture" id=46]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_20.png" type="Texture" id=47]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/3_atk/3_atk_22.png" type="Texture" id=48]
+[ext_resource path="res://Player/Down Transition.gd" type="Script" id=49]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_10.png" type="Texture" id=50]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_11.png" type="Texture" id=51]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_12.png" type="Texture" id=52]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_13.png" type="Texture" id=53]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_7.png" type="Texture" id=54]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_8.png" type="Texture" id=55]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_9.png" type="Texture" id=56]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_1.png" type="Texture" id=57]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_3.png" type="Texture" id=58]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_2.png" type="Texture" id=59]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_4.png" type="Texture" id=60]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_5.png" type="Texture" id=61]
+[ext_resource path="res://Player/Elementals_ground_monk_FULL_v1.3/png/defend/defend_6.png" type="Texture" id=62]
+[ext_resource path="res://Player/Fall.gd" type="Script" id=63]
+[ext_resource path="res://Player/Jump.gd" type="Script" id=64]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 17 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 57 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ) ],
+"loop": true,
+"name": "Block",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 38 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 36 ), ExtResource( 47 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "Down Light",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Move",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Nuetral Light",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "Side Light",
+"speed": 12.0
+} ]
 
 [node name="Player 1" type="KinematicBody2D"]
+scale = Vector2( 3, 3 )
 script = ExtResource( 1 )
-speed = null
-accel = null
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+gravity = 35.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 40 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "Down Light"
+frame = 7
+playing = true
+
+[node name="State Manager" type="Node" parent="."]
+script = ExtResource( 25 )
+Default_State = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="State Manager"]
+script = ExtResource( 23 )
+Name_of_Animation = "Idle"
+nuetral_light = NodePath("../Nuetral Light")
+side_light_node = NodePath("../Side Light")
+down_light_node = NodePath("../Block - Down Light Chosen")
+move_node = NodePath("../Move")
+
+[node name="Move" type="Node" parent="State Manager"]
+script = ExtResource( 24 )
+Name_of_Animation = "Move"
+idle = NodePath("../Idle")
+nuetral_light_node = NodePath("../Nuetral Light")
+side_light_node = NodePath("../Side Light")
+down_light_node = NodePath("../Block - Down Light Chosen")
+move_speed = 60
+
+[node name="Nuetral Light" type="Node" parent="State Manager"]
+script = ExtResource( 22 )
+Name_of_Animation = "Nuetral Light"
+
+[node name="Side Light" type="Node" parent="State Manager"]
+script = ExtResource( 26 )
+Name_of_Animation = "Side Light"
+
+[node name="Block - Down Light Chosen" type="Node" parent="State Manager"]
+script = ExtResource( 49 )
+Name_of_Animation = "Block"
+down_light_node = NodePath("../Down Light")
+
+[node name="Down Light" type="Node" parent="State Manager"]
+script = ExtResource( 35 )
+Name_of_Animation = "Down Light"
+
+[node name="Jump" type="Node" parent="State Manager"]
+script = ExtResource( 64 )
+
+[node name="Fall" type="Node" parent="State Manager"]
+script = ExtResource( 63 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="State Manager" method="_on_AnimatedSprite_animation_finished"]
